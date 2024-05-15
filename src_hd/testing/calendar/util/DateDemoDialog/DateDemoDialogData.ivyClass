@@ -1,0 +1,4 @@
+DateDemoDialogData #class
+testing.calendar.util.DateDemoDialog #namespace
+datetime DateTime #field
+datetime PERSISTENT #fieldModifier
