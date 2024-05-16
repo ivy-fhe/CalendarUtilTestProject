@@ -15,51 +15,34 @@
         "at" : { "x" : 96, "y" : 64 }
       },
       "connect" : [
-        { "id" : "f2", "to" : "f3" }
+        { "id" : "f3", "to" : "f2" }
       ]
     }, {
       "id" : "f1",
       "type" : "TaskEnd",
       "visual" : {
-        "at" : { "x" : 632, "y" : 64 },
+        "at" : { "x" : 512, "y" : 64 },
         "labelOffset" : { "x" : 13, "y" : 33 }
       }
     }, {
-      "id" : "f3",
+      "id" : "f2",
       "type" : "DialogCall",
       "config" : {
-        "dialog" : "testing.calendar.util.DateDemoDialog:start(DateTime)",
+        "dialog" : "testing.calendar.util.CalDemoDialog:start(testing.calendar.util.CalMainData)",
         "call" : {
           "map" : {
-            "param.datetime" : "in.datetime"
+            "param.calMainData" : "in"
           }
         },
         "output" : {
-          "map" : {
-            "out" : "in",
-            "out.datetime" : "result.datetime"
-          }
+          "code" : "ivy.log.info(in.testDate);"
         }
       },
       "visual" : {
-        "at" : { "x" : 284, "y" : 64 }
+        "at" : { "x" : 296, "y" : 64 }
       },
       "connect" : [
-        { "id" : "f4", "to" : "f5", "color" : "default" }
-      ]
-    }, {
-      "id" : "f5",
-      "type" : "Script",
-      "config" : {
-        "output" : {
-          "code" : "ivy.log.warn(in.datetime);"
-        }
-      },
-      "visual" : {
-        "at" : { "x" : 458, "y" : 64 }
-      },
-      "connect" : [
-        { "id" : "f6", "to" : "f1", "color" : "default" }
+        { "id" : "f4", "to" : "f1" }
       ]
     } ]
 }
